@@ -18,9 +18,8 @@ public class FileSystemMcpClient {
     public static void main(String[] args) {
         McpSyncClient client = createClient();
         tools(client);
-        client.listResources().resources()
-                .forEach(resource -> System.out.println(resource.name()));
         list_directory(client);
+        client.close();
     }
 
     public static McpSyncClient createClient() {
