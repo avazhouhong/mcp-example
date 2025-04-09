@@ -1,0 +1,25 @@
+spring:
+  ai:
+    openai:
+      api-key: sk-yydszwaahaxtjzmsuvczcurmtjuelkzaxhqvjyhrikaqhvtb
+      base-url: https://api.siliconflow.cn
+      chat:
+        options:
+          model: Qwen/Qwen2.5-72B-Instruct
+    mcp:
+      client:
+#        sse:
+#          connections:
+#            server1:
+#              url: http://localhost:8999
+        stdio:
+          root-change-notification: false
+          servers-configuration: classpath:/mcp-servers-config.json
+        toolcallback:
+          enabled: true
+server:
+  port: 9091
+#logging:
+#  level:
+#    org.springframework: DEBUG
+#    reactor: DEBUG
